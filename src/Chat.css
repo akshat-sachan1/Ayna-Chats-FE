@@ -1,51 +1,79 @@
-.chat-app {
-    display: flex;
-  }
-  
-  .user-list {
-    width: 200px;
-    border-right: 1px solid #ccc;
-    padding: 10px;
-  }
-  
-  .user-list div {
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  .user-list div:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .chat-container {
-    flex: 1;
+/* Chat.css */
+
+.chat-container {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
   }
   
   .messages {
     flex: 1;
+    list-style: none;
     padding: 10px;
+    margin: 0;
     overflow-y: auto;
-    border-bottom: 1px solid #ccc;
   }
   
-  .message {
+  .messages li {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
   }
   
-  .input-container {
+  .messages .sent {
+    align-items: flex-end;
+  }
+  
+  .messages .received {
+    align-items: flex-start;
+  }
+  
+  .message-content {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #dcf8c6;
+    position: relative;
+  }
+  
+  .sent .message-content {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .timestamp {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 2px;
+  }
+  
+  .message-form {
     display: flex;
     padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
   }
   
-  input[type="text"] {
+  .message-form input {
     flex: 1;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
     margin-right: 10px;
   }
   
-  button {
-    padding: 10px;
+  .message-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
   }
   
